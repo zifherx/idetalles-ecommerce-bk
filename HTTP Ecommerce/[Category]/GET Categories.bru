@@ -1,0 +1,15 @@
+meta {
+  name: GET Categories
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:1338/api/categories?populate=*
+  body: none
+  auth: none
+}
+
+query {
+  populate: *
+}

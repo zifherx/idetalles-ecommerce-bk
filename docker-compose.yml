@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  postgres_db:
+    image: postgres:14-alpine
+    container_name: PostgresCont
+    restart: always
+    environment:
+      POSTGRES_DB: ecommerce-coffe
+      POSTGRES_USER: zifher
+      POSTGRES_PASSWORD: secret1234
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 5433:5432

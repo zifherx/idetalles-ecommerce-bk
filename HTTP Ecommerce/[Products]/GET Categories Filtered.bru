@@ -1,0 +1,16 @@
+meta {
+  name: GET Categories Filtered
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:1338/api/products?populate=*&filters[category][slug][$eq]=arreglos
+  body: none
+  auth: none
+}
+
+query {
+  populate: *
+  filters[category][slug][$eq]: arreglos
+}
